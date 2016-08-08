@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <div>
+    <video autoplay #videoElement></video>
+  </div>
+
+  <canvas #canvas></canvas>
+
+  <ion-card class="expandUp" *ngIf="pictureTaken">
+    <ion-card-header>
+      My analysis
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Hello! I am {{confidence}}% confident you are feeling {{mood}}.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col *ngFor="let label of labels" width-50>
+        <div class="tag">
+          {{label.desc}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <button (click)="takePicture()" fab fab-bottom fab-fixed fab-right block secondary>
+    <ion-icon name="camera"></ion-icon>
+  </button>
+</ion-content>

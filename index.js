@@ -12,6 +12,8 @@ app.use(bodyParser.json({ limit: '50mb' }));
 
 app.use(cors());
 
+app.use(express.static('public'));
+
 function decodeBase64Image(dataString) {
   var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
     response = {};

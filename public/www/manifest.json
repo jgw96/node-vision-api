@@ -1,0 +1,8 @@
+{
+  "name": "ion-mood",
+  "short_name": "ion-mood",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F44336",
+  "theme_color": "#F44336"
+}
